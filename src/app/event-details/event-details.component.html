@@ -1,0 +1,20 @@
+<h2>Event Details</h2> 
+
+<hr/>
+<div *ngIf="event">
+  <div>
+    <label><b>Id: </b></label> {{event.id}}
+  </div>
+  <div>
+    <label><b>Name: </b></label> {{event.name}}
+  </div>
+  <div>
+    <label><b>Department: </b></label> {{event.department}}
+  </div>  
+</div>
+
+<br>
+<br>
+<button (click)="eventList()" class="btn btn-primary" routerLink="">Back to event List</button>
+
+

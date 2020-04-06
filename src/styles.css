@@ -1,0 +1,180 @@
+*{
+   box-sizing: border-box;
+   font-family: 'Open Sans', ;
+}
+
+
+.mr-0{
+   margin: 0 !important;
+}
+.padd-0{
+   padding: 0 !important;
+}
+ul{
+   padding-left: 0;
+}
+
+.table-part table{
+   text-align: center;
+}
+
+.table-part table th ,td{
+   padding: 10px;
+   border: 1px solid #f4f4f4;
+   color: #757575;
+}
+
+.table-part  .table thead th{
+   border: 1px solid #465161;
+   font-weight: 600;
+   background-color: #465161;
+   color: #fff;
+}
+
+
+.table-part table .edit-btn{
+   display: inline-block;
+   padding: 6px 12px;
+   margin-right: 10px;
+   border: none;
+   outline: none;
+   text-transform: capitalize;
+   background-color: #00c292;
+   color: #fff;
+}
+.table-part table .dl-btn{
+   display: inline-block;
+   padding:6px  12px;
+   outline: none;
+   text-transform: capitalize;
+   border: none;
+   background-color: #03a9f3;
+   color: #fff;
+}
+
+
+.banner-text .nav-item .nav-link{
+   padding:10px 10px 10px 0;
+}
+
+.banner-text .nav {
+   border: none;
+   margin-bottom: 0;
+}
+.banner-text .nav .nav-item .nav-link.active{
+   border:none;
+}
+
+.banner-sec{
+   padding: 20px 0;
+}
+.banner-sec .create-btn{
+   text-align: right;
+   padding-top: 40px;
+}
+
+.banner-sec .create-btn a{
+   padding: 9px 20px;
+   border: none;
+   outline: none;
+   display: inline-block;
+   background: #465161;
+   color: #fff;
+   text-decoration: none;
+   font-size: 16px;
+   text-transform: capitalize;
+}
+
+.banner-text ul li a{
+   color: #999;
+}
+
+.banner-text h2{
+   color: #465161;
+   font-size: 35px;
+   font-weight: 600;
+
+}
+
+#menu-icon{
+   position: relative;
+   margin-right: 10px;
+   top: 10px;
+   color: #999;
+}
+
+.detail-part{
+   padding: 0 20px;
+}
+
+.student-create{
+   padding: 0 20px;
+}
+
+.student-create form input{
+   width: 300px;
+   height: 40px;
+   box-shadow: none;
+   border-radius: 0;
+   padding: 0 10px;
+   outline: none;
+}
+
+.student-create form .form-group{
+   margin-bottom: 20px;
+}
+
+.student-create form .form-group label{
+   padding-top: 5px;
+}
+
+.student-create form input:focus{
+   outline: none;
+   box-shadow: none;
+}
+
+.submit-btn{
+   padding: 12px 20px;
+   border: none;
+   background: #465161;
+   color: #fff;
+   font-size: 15px;
+   outline: none;
+   box-shadow:none;
+}
+
+.content-part{
+   width: 41%;
+}
+
+.tab-content-part{
+   width: 38%;
+}
+
+.tab-part ul{
+   border-bottom: 1px solid #465161;
+   margin-bottom: 30px;
+}
+
+.tab-part  .nav-tabs .nav-item{
+   margin-bottom: 0;
+}
+
+.tab-part .nav-tabs .nav-link{
+   border:none;
+   font-size: 18px;
+   font-weight: 500;
+   text-transform: capitalize;
+   color: #252525;
+   padding: 10px 35px;
+}
+
+.tab-part .nav-tabs .nav-link.active{
+    border-bottom: 2px solid #252525;
+}
+
+.tab-part  form select{
+   width: 300px;
+   height: 40px;
+   border:1px solid #ced4da;
+}

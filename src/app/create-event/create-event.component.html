@@ -1,0 +1,132 @@
+<section class="detail-part">
+    <div class="banner-sec">
+        <div class="row">
+            <div class="col-6">
+                <div class="banner-text">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link active">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <span id="menu-icon">/</span>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">Events</a>
+                        </li>
+                    </ul>
+                    <h2>Events</h2>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="create-btn">
+                    <a routerLink="/event-list">
+               Back
+               </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="tab-part student-create">
+    <ul ngbNav #nav="ngbNav" class="nav-tabs">
+        <li ngbNavItem>
+            <a ngbNavLink>Info</a>
+            <ng-template ngbNavContent [hidden]="submitted">
+                <section class="student-create">
+                    <div [hidden]="submitted">
+                        <form (ngSubmit)="onSubmit()" action="http://localhost:3000/events" method="POST">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label>ID</label>
+                                        <input type="text" class="form-control" id="" required [(ngModel)]="event.id" name="id">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label>Name</label>
+                                        <input type="text" class="form-control" id="" required [(ngModel)]="event.name" name="name">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label>Department</label>
+                                        <input type="text" class="form-control" id="" required [(ngModel)]="event.department" name="department">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label>Date</label>
+                                        <input type="text" name="date" class="form-control" required [(ngModel)]="event.date">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label>Invited</label>
+                                        <input type="name" name="invited" class="form-control" required [(ngModel)]="event.invited">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label>Accepted</label>
+                                        <input type="name" name="accepted" class="form-control" required [(ngModel)]="event.accepted">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div>
+                                        <button type="submit" class="submit-btn">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- <div [hidden]="!submitted">
+					    <h4>You submitted successfully!</h4>
+					    <button class="btn btn-success" (click)="newStudent()">Add</button>
+					  </div> -->
+                </section>
+            </ng-template>
+        </li>
+        <li ngbNavItem>
+            <a ngbNavLink>Guests</a>
+            <ng-template ngbNavContent></ng-template>
+        </li>
+        <li ngbNavItem>
+            <a ngbNavLink>Reviews</a>
+            <ng-template ngbNavContent>
+                <div class="table-part">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Event Id</th>
+                                <th>Lecturer</th>
+                                <th>Reviewer</th>
+                                <th>Event Name</th>
+                                <th class="tab-content-part">Review</th>
+                                <th>Rating</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- <tr *ngFor="let review of reviews">
+                                <td>{{review.id}}</td>
+                                <td>{{review.lecturername}}</td>
+                                <td>{{review.reviewer}}</td>
+                                <td>{{review.name}}</td>
+                                <td>{{review.reviews}}</td>
+                                <td>{{review.rating}}</td>
+                                <td>
+                                    <button class='edit-btn'>Approve</button>
+                                    <button class='dl-btn'>Decline</button>
+                                </td>
+                            </tr> -->
+
+                        </tbody>
+                    </table>
+                </div>
+            </ng-template>
+        </li>
+    </ul>
+    <div [ngbNavOutlet]="nav"></div>
+</section>

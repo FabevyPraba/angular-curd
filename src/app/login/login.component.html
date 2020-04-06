@@ -1,0 +1,50 @@
+<!-- <div class="login">
+  <div class="login-triangle"></div>
+
+  <h2 class="login-header">Log in</h2>
+
+  <form class="login-container"  [formGroup]="loginForm" (ngSubmit)="Login()">
+    <p>
+      <input type="email" placeholder="Email" formControlName="emailForm" name="username" [(ngModel)]="Username"   [ngClass]="{ 'is-invalid': submitted && f.emailForm.errors }" autocomplete="off"></p>
+      <div *ngIf="submitted && f.emailForm.errors" class="invalid-feedback">
+          <div class="requirecolor valiAlign" *ngIf="f.emailForm.errors.required">Email is required</div>
+          <div class="requirecolor valiAlign" *ngIf="f.emailForm.errors.pattern">Email must be a valid email
+              address</div>
+      </div>
+      <p>
+      <input type="password" placeholder="Password" [(ngModel)]="Password" formControlName="passwordForm" name="password"    [ngClass]="{ 'is-invalid': submitted && f.passwordForm.errors }" autocomplete="off"></p>
+      <div *ngIf="submitted && f.passwordForm.errors" class="invalid-feedback">
+          <div class="requirecolor valiAlign" *ngIf="f.passwordForm.errors.required">Password is required</div>
+          <div class="requirecolor valiAlign" *ngIf="f.passwordForm.errors.minlength">Must Have length more than
+              10</div>
+      </div>
+
+      <p><input type="submit" value="Log in"></p>
+  </form>
+</div>
+ -->
+
+ <h2>Login</h2>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+        <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+            <div *ngIf="f.username.errors.required">Username is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+            <div *ngIf="f.password.errors.required">Password is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <button [disabled]="loading" class="btn btn-primary">
+            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+            Login
+        </button>
+        <a routerLink="/register" class="btn btn-link">Register</a>
+    </div>
+</form>
